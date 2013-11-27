@@ -1,0 +1,106 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Forms</title>
+<link href="css/general.css" rel="stylesheet">
+</head>
+
+<body>
+
+<form>
+
+	<div>
+		<label for="name">
+    	Name
+       <strong class="error">Please fill in your name</strong>
+    	</label>
+    	<input type="text" id="name" class="input-text input-error" required>
+    </div>
+    
+    <div>
+	<label for"pass">Password</label>
+    <input type="password" id="pass" class="input-text" minlength="8">
+    <p>Minimum lenghth is 8 characters.</p>
+    </div>
+    
+    <div>
+	<label for"email">E-mail Address</label>
+    <input type="email" id="email" class="input-text" maxlenght="256">
+    </div>
+    
+    <div>
+	<label for"website">Website</label>
+    <input type="url" id="website" class="input-text" placeholder="http://example.com">
+    </div>
+    
+    <div>
+	<label for"age">Age</label>
+    <input type="number" id="age" min="1" max="130" pattern="[0-9]*">
+    </div>
+    
+    <div>
+	<label for"favocolour">Favourite Colour</label>
+    <input type="color" id="favocolour">
+    </div>
+    
+    <div>
+	<label for"birthday">Birthday</label>
+    <input type="date" id="birthday">
+    </div>
+    <!--
+   	type=time
+    type=datetime-local
+    -->
+    
+    <div>
+	<label for"awesomeness">Level of Awesomeness</label>
+    <input type="range" id="awesomeness" min="10" max="100" step="10">
+    </div>
+    
+    <div>
+    	<input type="checkbox" id="code" checked>
+        <label for="code">I love code!</label>
+    </div>
+    
+    <fieldset>
+    	<legend>Level of satisfaction</legend>
+        
+       <input type="radio" id="extreme-bad" name="satisfaction">
+       <label for "extreme-bad">Extremely dissatisfied</label>
+       
+       <input type="radio" id="bad" name="satisfaction">
+       <label for "bad">Dissatisfied</label> 
+       
+       <input type="radio" id="neutral" name="satisfaction">
+       <label for "neutral">Neutral</label>
+       
+       <input type="radio" id="good" name="satisfaction">
+       <label for "good">Satisfied</label>
+       
+       <input type="radio" id="extreme-good" name="satisfaction">
+       <label for "extreme-good">Extremely satisfied</label>
+    </fieldset>
+    
+    
+    <div>
+    <label for="dino">Favourite dinosaur</label>
+    <select id="dino">
+    	<option>T-Rex</option>
+       <option>Stegasaurus</option>
+       <option>Dimetroduon</option>
+       <option>Triceratops</option>
+    </select>
+    </div>
+    
+    <div>
+    <label id="why">Why is that your favourite dinosaur?</label>
+    <textarea id="why"></textarea>
+    </div>
+    
+    <button type="submit">Send!</button>
+    
+</form>
+
+</body>
+</html>
