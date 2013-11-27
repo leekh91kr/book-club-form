@@ -17,7 +17,7 @@ input + label {
 	border-radius: 4px;
 	background-image: linear-gradient(to bottom, #efefef, #fff);
 	padding: 0.5em;
-	width: 100%;
+	width: 95%;
 }
 textarea {
 	max-width: 100%;
@@ -42,4 +42,27 @@ button {
 
 .input-error {
 	border: 3px solid #f33;
+}
+	
+
+@media only screen and (min-width: 91em) {
+	html {
+		font-size: 130%;
+	
+}
+}
+
+
+@media only screen and (min-width: 122em) {
+	html {
+		font-size: 200%;
+	
+}
+}
+
+@media only screen and (min-width: 183em) {
+	html {
+		font-size: 300%;
+	
+}
 }

@@ -4,13 +4,14 @@
 <meta charset="UTF-8">
 <title>Forms</title>
 <link href="css/general.css" rel="stylesheet">
+<link href="css/grid.css" rel="stylesheet">
 </head>
 
 <body>
 
 <form>
 
-	<div>
+	<div class="unit unit-s-1 unit-m-1-2 unit-l-1-2">
 		<label for="name">
     	Name
        <strong class="error">Please fill in your name</strong>
@@ -18,73 +19,74 @@
     	<input type="text" id="name" class="input-text input-error" required>
     </div>
     
-    <div>
-	<label for"pass">Password</label>
-    <input type="password" id="pass" class="input-text" minlength="8">
-    <p>Minimum lenghth is 8 characters.</p>
-    </div>
-    
-    <div>
+    <div class="unit unit-s-1 unit-m-1-2 unit-l-1-2">
 	<label for"email">E-mail Address</label>
-    <input type="email" id="email" class="input-text" maxlenght="256">
+    <strong class="error">Please fill in your e-mail address</strong>
+    <input type="email" id="email" class="input-text" maxlenght="256" required>
     </div>
     
-    <div>
-	<label for"website">Website</label>
-    <input type="url" id="website" class="input-text" placeholder="http://example.com">
+    <div class="unit unit-s-1 unit-m-1 unit-l-1">
+	<label for"phone">Phone Number</label>
+    <input type="phone" id="phone" class="input-text" optional>
     </div>
     
-    <div>
-	<label for"age">Age</label>
-    <input type="number" id="age" min="1" max="130" pattern="[0-9]*">
+     <div class="unit unit-s-1 unit-m-1-2 unit-l-1-2">
+	<label for"address">Address</label>
+    <input type="h-address" id="h-address" class="input-text" placeholder="Street number and name" required>
     </div>
     
-    <div>
-	<label for"favocolour">Favourite Colour</label>
-    <input type="color" id="favocolour">
+    <div class="unit unit-s-1 unit-m-1-2 unit-l-1-2">
+	<label for"address">City</label>
+    <input type="h-address" id="h-address" class="input-text" placeholder="City" required>
     </div>
     
-    <div>
-	<label for"birthday">Birthday</label>
-    <input type="date" id="birthday">
+    <div class="unit unit-s-1 unit-m-1-2 unit-l-1-2">
+    <label for="state">State</label>
+    <select id="state" required>
+    	<option>Unselected</option>
+       <option>YT</option>
+       <option>NT</option>
+       <option>NU</option>
+       <option>BC</option>
+       <option>AB</option>
+       <option>SK</option>
+       <option>MB</option>
+       <option>ON</option>
+       <option>QC</option>
+       <option>NL</option>
+       <option>NB</option>
+       <option>NS</option>
+       <option>PE</option>
+    </select>
     </div>
-    <!--
+    
+    <div class="unit unit-s-1 unit-m-1-2 unit-l-1-2">
+	<label for"address">Postal Code</label>
+    <input type="h-address" id="h-address" class="input-text" maxlenght="7" placeholder="Postal Code (ex.A1B2C3)">
+    </div>
+    
+    <div class="unit unit-s-1 unit-m-1-2 unit-l-1-2">
+    <label for="birthday">What time of day would be best to meet?</label>
+    <input type="time" id="time+calender">
+	</div>
+    
+    <div class="unit unit-s-1 unit-m-1-2 unit-l-1-2">
+	<label for"number">How many books have your read this year?</label>
+    <input type="number" id="age" min="1" max="130" pattern="[0-9]*" optional>
+    </div>
+        <!--
    	type=time
     type=datetime-local
     -->
     
-    <div>
-	<label for"awesomeness">Level of Awesomeness</label>
-    <input type="range" id="awesomeness" min="10" max="100" step="10">
+    
+    <div class="unit unit-s-1 unit-m-1-3 unit-l-1-3">
+    <label id="why">Describe your favourite book and author.</label>
+    <textarea id="why"></textarea>
     </div>
-    
-    <div>
-    	<input type="checkbox" id="code" checked>
-        <label for="code">I love code!</label>
-    </div>
-    
-    <fieldset>
-    	<legend>Level of satisfaction</legend>
-        
-       <input type="radio" id="extreme-bad" name="satisfaction">
-       <label for "extreme-bad">Extremely dissatisfied</label>
-       
-       <input type="radio" id="bad" name="satisfaction">
-       <label for "bad">Dissatisfied</label> 
-       
-       <input type="radio" id="neutral" name="satisfaction">
-       <label for "neutral">Neutral</label>
-       
-       <input type="radio" id="good" name="satisfaction">
-       <label for "good">Satisfied</label>
-       
-       <input type="radio" id="extreme-good" name="satisfaction">
-       <label for "extreme-good">Extremely satisfied</label>
-    </fieldset>
-    
-    
-    <div>
-    <label for="dino">Favourite dinosaur</label>
+
+    <div class="unit unit-s-1 unit-m-1-3 unit-l-1-3">
+    <label for="dino">How much do you love?</label>
     <select id="dino">
     	<option>T-Rex</option>
        <option>Stegasaurus</option>
@@ -93,10 +95,36 @@
     </select>
     </div>
     
-    <div>
-    <label id="why">Why is that your favourite dinosaur?</label>
-    <textarea id="why"></textarea>
+    <div class="unit unit-s-1 unit-m-1-3 unit-l-1-3">
+	<label for"awesomeness">Level of happiness for read a book to you.</label>
+    <input type="range" id="awesomeness" min="10" max="100" step="10">
     </div>
+    
+    <div>
+    	<input type="checkbox" id="code" checked>
+        <label for="code">I love to read a book</label>
+    </div>
+    
+    <fieldset>
+    	<legend>How much do you love this genre?</legend>
+        
+       <input type="radio" id="extreme-bad" name="satisfaction">
+       <label for "extreme-bad">Extremely don't love</label>
+       
+       <input type="radio" id="bad" name="satisfaction">
+       <label for "bad">Don't love</label> 
+       
+       <input type="radio" id="neutral" name="satisfaction">
+       <label for "neutral">Neutral</label>
+       
+       <input type="radio" id="good" name="satisfaction">
+       <label for "good">love</label>
+       
+       <input type="radio" id="extreme-good" name="satisfaction">
+       <label for "extreme-good">Extremely love</label>
+    </fieldset>
+
+ 
     
     <button type="submit">Send!</button>
     
